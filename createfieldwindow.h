@@ -16,8 +16,6 @@ class CreateFieldWindow : public QMainWindow
 public:
     CreateFieldWindow(QWidget *parent = nullptr);
     void generateButtons();
-    void generateShipInfo();
-    bool checkConditions(int i, int j, int Size, bool IsHorizontal);
     ~CreateFieldWindow();
     int num4;
     int num3;
@@ -26,7 +24,6 @@ public:
 
 public slots:
     void buttonClicked();
-    void shipSelected(bool State);
 
 private slots:
     void on_pushButton_exit_clicked();
@@ -39,7 +36,6 @@ private:
     Ui::CreateFieldWindow *ui;
 
     FieldCell ** *ButtonField;
-    ShipDescription *SelectedShip = nullptr;
 
 
 };
