@@ -2,6 +2,7 @@
 #define CREATEFIELDWINDOW_H
 
 #include <QMainWindow>
+#include "FieldCell.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class CreateFieldWindow; }
@@ -16,14 +17,25 @@ public:
     CreateFieldWindow(QWidget *parent = nullptr);
     void generateButtons();
     ~CreateFieldWindow();
+    int num4;
+    int num3;
+    int num2;
+    int num1;
 
 public slots:
     void buttonClicked();
 
+private slots:
+    void on_pushButton_exit_clicked();
+
+    void on_pushButton_clear_clicked();
+
+    void on_pushButton_accept_clicked();
+
 private:
     Ui::CreateFieldWindow *ui;
 
-    QPushButton ** *ButtonField;
+    FieldCell ** *ButtonField;
 
 
 };

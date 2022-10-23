@@ -13,6 +13,7 @@ SOURCES += \
     createfieldwindow.cpp
 
 HEADERS += \
+    FieldCell.h \
     createfieldwindow.h
 
 FORMS += \
